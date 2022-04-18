@@ -20,14 +20,14 @@
     "extra": {
         "laravel": {
             "providers": [
-                "TheRiptide\\LaravelDashboardComponents\\DashboardComponentServiceProvider"
+                "TheRiptide\\LaravelDashboardComponents\\ComponentServiceProvider"
             ]
         }
     },
 
     "autoload" : {
         "psr-4" : {
-            "TheRiptide\\LaravelDeashboardComponents\\": "src/"
+            "TheRiptide\\LaravelDashboardComponents\\": "src/"
 
         }
     },
