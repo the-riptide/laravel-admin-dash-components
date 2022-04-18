@@ -27,11 +27,11 @@
 
     "autoload" : {
         "psr-4" : {
-            "TheRiptide\\LaravelDeashboardComponents": "src/"
+            "TheRiptide\\LaravelDeashboardComponents\\": "src/"
 
         }
     },
-    
+
     "minimum-stability": "dev",
     "require": {
         "php": "^8.0",
