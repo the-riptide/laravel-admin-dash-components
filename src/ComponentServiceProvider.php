@@ -9,10 +9,10 @@ class ComponentServiceProvider extends ServiceProvider
 
     public function boot() {
 
-        $this->loadViewsFrom(__DIR__.'/../views', 'daco');
+        $this->loadViewsFrom(__DIR__.'/../views', 'dashcomp');
 
         $this->publishes([
-            __DIR__.'/../views' => resource_path('views/vendor/daco'),
+            __DIR__.'/../views' => resource_path('views/vendor/dashcomp'),
         ]);
     }
 
