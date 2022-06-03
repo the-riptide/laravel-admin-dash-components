@@ -22,9 +22,9 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 
                     @foreach ($items as $key => $item)
-                    <x-dyndash::menu.nav-link :active="$item['active']" href="{{ route($item['route'], [$item['parameter'] ?? null]) }}">
+                    <x-dashcomp::menu.nav-link :active="$item['active']" href="{{ route($item['route'], [$item['parameter'] ?? null]) }}">
                         {{ $item['name'] }}
-                    </x-dyndash::menu.nav-link>
+                    </x-dashcomp::menu.nav-link>
                     @endforeach
                 </div>
             </div>
