@@ -58,11 +58,11 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            @if (Route::has('profile.show'))
+                            {{-- @if (Route::has('profile.show'))
                                 <x-dashcomp::menu.dropdown-link href="{{ route('profile.show') }}">
                                     {{ __('Profile') }}
                                 </x-dashcomp::menu.dropdown-link>
-                            @endif
+                            @endif --}}
 
                             <div class="border-t border-gray-100"></div>
 
@@ -102,7 +102,7 @@
         {{-- Main Links --}}
         <div class="space-y-1 pt-2 pb-3">
             @foreach ($items as $key => $item)
-                <x-dashcomp::menu.responsive-nav-link :active="request()->routeIs('profile.show')"
+                <x-dashcomp::menu.responsive-nav-link :active="$item['active']"
                     href="{{ route($item['route'], [$item['parameter'] ?? null]) }}">
                     {{ $item['name'] }}
                 </x-dashcomp::menu.responsive-nav-link>
@@ -121,11 +121,11 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
-                @if (Route::has('profile.show'))
+                {{-- @if (Route::has('profile.show'))
                 <x-dashcomp::menu.responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-dashcomp::menu.responsive-nav-link>
-                @endif
+                @endif --}}
 
                 <!-- Logout -->
                 <form method="POST" action="{{ route('logout') }}">
