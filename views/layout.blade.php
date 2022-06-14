@@ -34,10 +34,16 @@
             <!-- Page Header -->
             @if (View::hasSection('title'))
                 <header class="text-2xl font-semibold">
-                    <div class="max-w-6xl mx-auto px-4 lg:px-8 py-4">
+                    <div class="max-w-6xl mx-auto px-4 lg:px-8 py-4 flex lg:justify-start space-x-2 lg:space-x-6">
+                        {{-- Page Title --}}
                         <h3 class="text-2xl font-bold text-gray-900">
                             @yield('title')
                         </h3>
+
+                        {{-- Status --}}
+                        @if(session('status'))
+                            <x-dashcomp::alert :status="session('status')" />
+                        @endif
                     </div>
                 </header>
             @endif
