@@ -9,7 +9,7 @@
         'advlist autolink lists link image charmap print preview anchor',
         'searchreplace visualblocks code fullscreen',
         'insertdatetime media table paste code help wordcount',
-        'autoresize'
+        'autoresize code'
     ],
     max_height: 700,
     min_height: 350,
@@ -17,7 +17,7 @@
     toolbar: 'undo redo | formatselect | ' +
         'bold italic backcolor | alignleft aligncenter ' +
         'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat | help',
+        'removeformat | help | code',
     setup: function(editor) {
         editor.on('blur', function(e) {
             value = editor.getContent()
